@@ -1,0 +1,8 @@
+Howto : automate Conversion png/jpg/jpeg images in a project to webp format
+###############################################################################
+
+Step 1 => run 'bash search-convert-img.sh'
+
+Step 2 => run 'bash convert_images.sh'
+
+Step 3 => replace all .png .jpg & .jpeg format by .webp format

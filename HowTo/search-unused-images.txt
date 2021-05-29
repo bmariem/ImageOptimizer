@@ -1,0 +1,6 @@
+Howto : automate cleaning a project from unused assets
+###############################################################################
+
+Step 1 => run 'sh search-unused-img.sh'
+Step 2 => the file 'search-unused-img.sh' will be executed 
+

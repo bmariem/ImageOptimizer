@@ -1,0 +1,11 @@
+Howto : automate Conversion videos to webm format
+###############################################################################
+
+Step 1 => run 'bash search-convert-img.sh'
+
+Step 2 => run 'bash convert_images_gif.sh'
+
+Step 3
+        => replace all .gif by*.webm*
+        => replace img tag by video
+        => correct CSS
