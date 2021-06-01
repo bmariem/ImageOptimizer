@@ -1,4 +1,4 @@
-# ImageOptimizer
+# Image Optimizer
 
 Clean project:
 
