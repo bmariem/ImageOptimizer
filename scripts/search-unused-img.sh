@@ -1,6 +1,7 @@
 #!/bin/bash
 
-images=$(find . -type f \( ! -path './.git/*' ! -path 'add assets paths here' -and \( -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' -or -name '*.svg' -or -name '*.gif' \) \) -exec echo ''{}'' \;)
+assets_path=$1
+images=$(find . -type f \( ! -path './.git/*' ! -path $assets_path -and \( -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' -or -name '*.svg' -or -name '*.gif' \) \) -exec echo ''{}'' \;)
 
 image_count=${#images[@]}
 
@@ -17,7 +18,7 @@ do
 	name=`basename -s .gif $name`
 	name=`basename -s @2x $name`
 
-	used_count=$(grep -Rl --exclude-dir={.git,.gems,_site} $name | wc -l)
+	used_count=$(grep -Rl --exclude-dir={.git, $assets_path} $name | wc -l)
 	echo "$name,$used_count"
 	if [ $used_count = "0" ]
 	then
