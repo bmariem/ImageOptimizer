@@ -1,6 +1,8 @@
 #!/bin/bash
-#!/ add assets paths
-images=$(find . -type f \( ! -path './.git/*' ! -path 'add assets paths here' -and \( -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' \) \) -exec echo ''{}'' \;)
+
+assets_path=$1
+
+images=$(find . -type f \( ! -path './.git/*' ! -path $assets_path -and \( -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' \) \) -exec echo ''{}'' \;)
 
 image_count=${#images[@]}
 
@@ -20,7 +22,7 @@ do
 
 done
 
-images=$(find . -type f \( ! -path './.git/*' ! -path 'add assets paths here' -and \( -name '*.gif' \) \) -exec echo ''{}'' \;)
+images=$(find . -type f \( ! -path './.git/*' ! -path $assets_path -and \( -name '*.gif' \) \) -exec echo ''{}'' \;)
 
 image_count=${#images[@]}
 
