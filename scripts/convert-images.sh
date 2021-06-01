@@ -20,7 +20,7 @@ do
 
 done
 
-images=$(find . -type f \( ! -path './.git/*' ! -path './.gems/*' ! -path './_site/*' -and \( -name '*.gif' \) \) -exec echo ''{}'' \;)
+images=$(find . -type f \( ! -path './.git/*' ! -path 'add assets paths here' -and \( -name '*.gif' \) \) -exec echo ''{}'' \;)
 
 image_count=${#images[@]}
 
